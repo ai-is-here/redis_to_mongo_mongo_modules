@@ -7,6 +7,8 @@ class BaseConfig:
         self.config = self.load_config(config_file)
 
     def load_config(self, config_file: str):
+        if not os.path.exists(config_file):
+            return {}
         return dotenv_values(config_file)
 
     def type_check_and_map(self, config_vars):
