@@ -1,5 +1,5 @@
 from mongoengine import connect
-from redis_to_mongo_mongo_modules.config_loader import MongoConfig
+from ..redis_to_mongo_mongo_modules.config_loader import MongoConfig
 
 
 class MongoHandler:
